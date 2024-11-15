@@ -18,10 +18,10 @@ struct AnimationView2: View {
       }
       
       Rectangle()
-        .fill(Color.green)
+            .fill(isAnimating ? Color.green : Color.red)
         .frame(width: 100, height: 50)
         .rotationEffect(.degrees(isAnimating ? -180 : 0))
-        .animation(.easeInOut(duration: 5), value: isAnimating)
+        .animation(.easeInOut(duration: 1), value: isAnimating)
     }
   }
 }

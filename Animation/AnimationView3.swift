@@ -19,7 +19,7 @@ struct AnimationView3: View {
       Circle()
           .fill(Color.blue)
           .frame(width: isAnimating ? 200 : 100, height: isAnimating ? 200 : 100)
-          .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 5.0), value: isAnimating)
+          .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 5.0), value: isAnimating)
     }
   }
 }

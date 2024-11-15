@@ -23,9 +23,9 @@ struct AnimationView1: View {
             .cornerRadius(8)
         }
         Button(action: {
-          withAnimation(.easeInOut(duration: 0.5)) { // Method 1
+//            withAnimation(.easeInOut(duration: 3.0)) { // Method 1
             isExpanded.toggle()
-          }
+//          }
         }) {
           Text("Toggle Animated")
             .padding()
@@ -36,7 +36,7 @@ struct AnimationView1: View {
       }
       
       Rectangle()
-        .fill(Color.red)
+            .fill(isExpanded ? Color.red : Color.blue)
         .frame(width: isExpanded ? 200 : 100, height: 100)
         .animation(.easeInOut(duration: 0.5), value: isExpanded) // Method 2
     }
